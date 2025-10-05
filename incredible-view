@@ -1,0 +1,10 @@
+# Input: Ask the user for their name
+name = input("What is your name nig*a? ")
+
+# Output: Print a greeting
+print("Hello, " + name + "!!!!!!!!!!!")
+age = input("How old are you? ")
+print("Next year, you will be " + str(int(age) + 1) + " years old.")
+day = input("what day its today?? ")
+print("Tomorrow will be " + str(int(day) + 1) + " today.")
+print("welcome to coding")
