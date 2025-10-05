@@ -1,10 +1,25 @@
-# Input: Ask the user for their name
-name = input("What is your name nig*a? ")
+import datetime
 
-# Output: Print a greeting
-print("Hello, " + name + "!!!!!!!!!!!")
+# Ask the user for their name
+name = input("What is your name gentleman? ")
+print("Hello, " + name + "!")
+
+# Ask the user for their age and calculate next year's age
 age = input("How old are you? ")
-print("Next year, you will be " + str(int(age) + 1) + " years old.")
-day = input("what day its today?? ")
-print("Tomorrow will be " + str(int(day) + 1) + " today.")
-print("welcome to coding")
+try:
+    next_age = int(age) + 1
+    print("Next year, you will be " + str(next_age) + " years old.")
+except ValueError:
+    print("That doesn't seem like a valid age.")
+
+# Ask for the current day of the week
+day = input("What day is it today? (e.g., Monday) ")
+days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+if day.capitalize() in days_of_week:
+    today_index = days_of_week.index(day.capitalize())
+    tomorrow_index = (today_index + 1) % 7
+    print(f"Tomorrow will be {days_of_week[tomorrow_index]}.")
+else:
+    print("That doesn't seem like a valid day of the week.")
+
+print("Welcome to coding!")
